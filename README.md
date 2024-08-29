@@ -1,4 +1,4 @@
-<h2>Olá, sou o Júlio😁 </h2>
+<h2>Olá, eu sou o Júlio😁 </h2>
 
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=juliogitdev&show_icons=true&theme=radical)
 
