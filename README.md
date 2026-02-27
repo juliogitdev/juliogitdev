@@ -32,14 +32,6 @@ Meu foco principal hoje é evoluir como Engenheiro de Software, unindo minha bas
 
 ---
 
-### 📊 Estatísticas do GitHub
-
-<div align="center">
-  <img height="180" src="https://github-readme-stats.vercel.app/api?username=juliogitdev&show_icons=true&theme=radical&include_all_commits=true&count_private=true&cache=1"/>
-  <img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=juliogitdev&layout=compact&langs_count=7&theme=radical&cache=1"/>
-</div>
-
----
 
 ### 📫 Como me encontrar
 
