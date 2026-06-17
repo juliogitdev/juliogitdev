@@ -1,39 +1,53 @@
-<div align="center">
-  <h2>Olá, eu sou o Júlio César 👋</h2>
-  <p><b>Desenvolvedor Back-end</b></p>
-</div>
+
+
+### Julio Vieira
+Backend engineer working primarily in Java and Spring Boot. I care more about why a system is shaped the way it is than about how many frameworks went into it.
+
+[LinkedIn](https://www.linkedin.com/in/julio-vieiracb)
 
 ---
 
-### 👨‍💻 Sobre mim
+**Now**
 
-Sou apaixonado pela engenharia por trás de sistemas robustos e escaláveis. Minha trajetória na tecnologia começou com uma forte base analítica, premiado como **medalhista da OBMEP** e atuando como pesquisador em Iniciação Científica (PIC/CNPq) com foco em lógica matemática. 
-
-Meu foco principal hoje é evoluir como Engenheiro de Software, unindo minha base lógica com a vontade de criar soluções que realmente impactem o dia a dia das pessoas. Acredito que a tecnologia só faz sentido quando resolve problemas reais e facilita rotinas.
-
+Going deeper into application architecture (domain modeling, layering, authorization design) and embedded systems / IoT, in parallel with day-to-day backend work.
 
 ---
 
-### 🛠️ Tecnologias e Ferramentas
+**Agenday** — scheduling and service management platform for independent professionals (barbershops, salons), built collaboratively with a small team.
 
-**Back-end & Arquitetura** <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java">
-<img src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white" alt="Spring Boot">
-<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
-<img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js">
+Stack: Java, Spring Boot, Spring Security, PostgreSQL, Flyway · React, TypeScript
 
-**Banco de Dados & Infraestrutura** <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
-<img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB">
-<img src="https://img.shields.io/badge/Flyway-CC0200?style=for-the-badge&logo=flyway&logoColor=white" alt="Flyway">
+A few things I made deliberate calls on:
 
-**Front-end (Integração)** <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
-<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React">
-<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML">
-<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS">
+- **Authorization is role-based at the domain level, not just route-level.** Admin, professional, and client roles map to different permitted actions on the same resources, enforced with `@PreAuthorize` rather than ad-hoc checks scattered through controllers. The cost is more upfront design on what each role can touch; the benefit is that adding a new role later doesn't mean re-auditing every endpoint.
+- **Deletions are soft, not hard.** Records carry a `deletedAt` via a shared `BaseEntity` instead of being removed from the table. In a system tied to scheduling and service history, losing a row also means losing the ability to explain what happened later — for disputes, audits, or just debugging a client's complaint. The trade-off is every query needs to be delete-aware, which is more friction than a `DELETE` statement but keeps the data honest.
+- Schema evolution is handled with Flyway migrations rather than `ddl-auto`, and errors are normalized through a single `GlobalExceptionHandler` so the API doesn't leak stack traces or inconsistent error shapes to the frontend.
+
+*Repository is private while the project is still being shaped — happy to walk through the code directly.*
 
 ---
 
+**Undergraduate thesis (IF Sertão-PE)** — IoT-based air conditioning automation using presence detection. PIR sensor + relay, prototyped in Tinkercad before moving to ESP32 hardware. The interesting part wasn't the sensor reading itself, it was deciding how long the system should wait after detecting no presence before acting — too short and it's annoying, too long and it defeats the purpose.
 
-### 📫 Como me encontrar
+---
 
-<a href="mailto:juliovieira035@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail"></a>
-<a href="https://www.linkedin.com/in/julio-vieiracb/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+**Stack**
+
+Backend
+<br>
+<img src="https://skillicons.dev/icons?i=java,spring,postgres,docker&theme=dark" height="40"/>
+
+Frontend
+<br>
+<img src="https://skillicons.dev/icons?i=ts,react&theme=dark" height="40"/>
+
+Embedded
+<br>
+<img src="https://skillicons.dev/icons?i=c,arduino&theme=dark" height="40"/>
+
+---
+
+<p align="left">
+  <img height="160" src="https://github-readme-stats.vercel.app/api?username=juliogitdev&show_icons=true&theme=default&hide_border=true&count_private=true" />
+  <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=juliogitdev&layout=compact&hide_border=true&langs_count=6" />
+</p>
