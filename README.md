@@ -46,8 +46,3 @@ Embedded
 <img src="https://skillicons.dev/icons?i=c,arduino&theme=dark" height="40"/>
 
 ---
-
-<p align="left">
-  <img height="160" src="https://github-readme-stats.vercel.app/api?username=juliogitdev&show_icons=true&theme=default&hide_border=true&count_private=true" />
-  <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=juliogitdev&layout=compact&hide_border=true&langs_count=6" />
-</p>
